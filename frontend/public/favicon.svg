@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="7" fill="#080a0f"/>
+  <!-- Hexagon outline (matching the ⬡ logo icon) -->
+  <polygon
+    points="16,3 27,9 27,23 16,29 5,23 5,9"
+    fill="none"
+    stroke="#00e5ff"
+    stroke-width="1.8"
+    stroke-linejoin="round"
+  />
+  <!-- Inner network nodes -->
+  <circle cx="16" cy="11" r="2" fill="#00e5ff"/>
+  <circle cx="10" cy="20" r="2" fill="#00e5ff"/>
+  <circle cx="22" cy="20" r="2" fill="#00e5ff"/>
+  <!-- Connecting edges -->
+  <line x1="16" y1="11" x2="10" y2="20" stroke="#00e5ff" stroke-width="1.2" stroke-opacity="0.6"/>
+  <line x1="16" y1="11" x2="22" y2="20" stroke="#00e5ff" stroke-width="1.2" stroke-opacity="0.6"/>
+  <line x1="10" y1="20" x2="22" y2="20" stroke="#00e5ff" stroke-width="1.2" stroke-opacity="0.6"/>
+  <!-- Fraud highlight dot (red) on one node -->
+  <circle cx="22" cy="20" r="2.5" fill="none" stroke="#ef4444" stroke-width="1.2"/>
+</svg>

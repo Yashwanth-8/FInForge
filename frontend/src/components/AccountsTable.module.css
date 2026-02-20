@@ -1,0 +1,136 @@
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.header {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionLabel {
+  font-size: 0.62rem;           /* was 0.58rem */
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted2);         /* was --muted, now lighter */
+  padding: 10px 20px 4px;
+}
+
+.badge {
+  font-size: 0.62rem;
+  padding: 2px 10px;
+  border-radius: 99px;
+  background: rgba(251,146,60,0.15);
+  color: var(--warn);
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+.tableWrap { overflow-x: auto; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.72rem;           /* was 0.7rem */
+}
+
+.table th {
+  padding: 10px 16px;
+  text-align: left;
+  font-size: 0.62rem;           /* was 0.58rem */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted2);         /* was --muted — now lighter/more readable */
+  background: rgba(0,0,0,0.25);
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+}
+
+.table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(37,45,64,0.6);  /* using lifted --border value */
+  vertical-align: middle;
+}
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: rgba(255,255,255,0.025); }
+
+.accountId {
+  color: var(--accent);
+  font-size: 0.7rem;            /* was 0.68rem */
+  font-weight: 600;
+}
+
+.scoreWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.scoreBar {
+  flex: 1;
+  height: 5px;                  /* was 4px — slightly thicker, easier to see */
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  min-width: 60px;
+}
+.scoreFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+.scoreNum {
+  font-size: 0.7rem;            /* was 0.68rem */
+  font-weight: 700;
+  min-width: 32px;
+  text-align: right;
+}
+
+.ringId {
+  font-size: 0.65rem;           /* was 0.62rem */
+  color: var(--muted2);         /* was --muted */
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  font-size: 0.6rem;            /* was 0.56rem — critical readability fix */
+  padding: 3px 7px;             /* was 2px 6px */
+  border-radius: 3px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.tagCycle {
+  background: rgba(239,68,68,0.12);
+  color: #f87171;               /* was var(--danger) #ef4444 — slightly lighter for contrast */
+  border: 1px solid rgba(239,68,68,0.3);
+}
+.tagSmurf {
+  background: rgba(245,197,24,0.12);
+  color: var(--accent3);
+  border: 1px solid rgba(245,197,24,0.3);
+}
+.tagShell {
+  background: rgba(192,132,252,0.12);
+  color: #d8b4fe;               /* slightly lighter purple for contrast */
+  border: 1px solid rgba(192,132,252,0.3);
+}

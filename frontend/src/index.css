@@ -1,0 +1,52 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #080a0f;
+  --surface: #0e1117;
+  --surface2: #141820;
+  --border: #252d40;          /* was #1c2130 — lifted for visible borders */
+  --accent: #00e5ff;
+  --accent2: #ff3b6b;
+  --accent3: #f5c518;
+  --purple: #c084fc;
+  --text: #e8edf8;            /* was #dde4f0 — slightly brighter */
+  --muted: #7a8aa8;           /* was #4a5568 — lifted for 4.5:1 contrast on surfaces */
+  --muted2: #9aaac4;          /* new: lighter muted for small labels */
+  --safe: #22c55e;
+  --warn: #fb923c;
+  --danger: #ef4444;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.fade-up { animation: fadeUp 0.45s ease forwards; }
+.fade-up-2 { animation: fadeUp 0.45s 0.1s ease both; }
+.fade-up-3 { animation: fadeUp 0.45s 0.2s ease both; }
+.fade-up-4 { animation: fadeUp 0.45s 0.3s ease both; }

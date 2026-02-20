@@ -1,0 +1,63 @@
+.strip { margin-bottom: 4px; }
+
+.label {
+  font-size: 0.65rem;           /* was 0.6rem */
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted2);         /* was --muted */
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;           /* was 18px 20px — more breathing room */
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--line-color, var(--accent));
+}
+.ok     { --line-color: var(--safe); }
+.warn   { --line-color: var(--warn); }
+.danger { --line-color: var(--danger); }
+.default { --line-color: var(--accent); }
+
+.cardLabel {
+  font-size: 0.62rem;           /* was 0.58rem */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted2);         /* was --muted */
+  margin-bottom: 10px;
+}
+.cardValue {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text);
+}
+.cardSub {
+  font-size: 0.63rem;           /* was 0.6rem */
+  color: var(--muted2);         /* was --muted */
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
