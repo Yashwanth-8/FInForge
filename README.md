@@ -243,5 +243,6 @@ server: {
 
 ## Team Members
 
-- [Your Name] — [Role]
-- [Your Name] — [Role]
+- K Srinivas Yashwanth
+- Nagaraja M
+- Maanya Naveen Kumar
