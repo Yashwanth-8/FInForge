@@ -2,8 +2,8 @@
 
 > RIFT 2026 Hackathon · Graph Theory / Financial Crime Detection Track
 
-**🔴 Live Demo:** `https://your-deployed-url.vercel.app`
-**📁 GitHub:** `https://github.com/your-org/finforge`
+**🔴 Live Demo:** `https://f-in-forge.vercel.app/`
+**📁 GitHub:** `https://github.com/Yashwanth-8/FInForge`
 
 ---
 
