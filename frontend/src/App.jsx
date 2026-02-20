@@ -8,7 +8,7 @@ import RingPanel from './components/RingPanel'
 import AccountsTable from './components/AccountsTable'
 import DownloadBar from './components/DownloadBar'
 import styles from './App.module.css'
-
+const API_BASE = "https://finforge-backend4.onrender.com"
 export default function App() {
   const [result, setResult]     = useState(null)
   const [loading, setLoading]   = useState(false)
@@ -43,7 +43,7 @@ export default function App() {
     try {
       const form = new FormData()
       form.append('file', file)
-      const { data } = await axios.post('/analyze', form, {
+      const { data } = await axios.post(`${API_BASE}/analyze`, form, {
         headers: { 'Content-Type': 'multipart/form-data' },
         timeout: 300000,  // 5 min timeout for large files
       })
@@ -71,7 +71,7 @@ export default function App() {
     ])
 
     try {
-      const { data } = await axios.post('/sample')
+      const { data } = await axios.post(`${API_BASE}/sample`)
       setProgress({ pct: 100, label: 'Done!' })
       setTimeout(() => { setResult(data); setLoading(false) }, 300)
     } catch (e) {
